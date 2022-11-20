@@ -7,6 +7,9 @@
 * {
     margin:0;
     padding: 0;
+    text-decoration: none;
+list-style: none;
+
     --color1: #f2f2f2;
     --color2: #000000;
     --color3: #e25421;
@@ -14,8 +17,6 @@
     --font1: 'applejuice', sans-serif;
     --font2: ;
     --font3: 'Poppins', sans-serif;
-
-
 }
 
 body {
@@ -31,11 +32,11 @@ nav {
     display: flex;
     justify-content: space-between;
     background: var(--color1);
-    height: 40px;
+    height:40px;
     width: 100%;
     align-items: center;
-    box-shadow: 0px 5px 10px 2px #0000003d;
 }
+
 .nav1 {
     background-color: #f2f8fc;
     height: 4rem;
@@ -44,6 +45,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index:2;
+    box-shadow: 0px 5px 10px 2px #0000003d;
 
 
 }
@@ -54,6 +56,9 @@ nav {
     columns: black;
     display: flex;
     justify-content: center;
+    position: fixed ;
+
+
 }
 
 img {
@@ -149,6 +154,13 @@ a {
     position:relative;
     margin-right: 20px;
 }
+.search:hover{
+    border: #92a3af 2px solid;
+}
+.container-search:hover .loupe{
+    border: #92a3af 2px solid;
+}
+
 .search{
    
     width:200px;
@@ -170,9 +182,10 @@ a {
 }
 .loupe img{
     padding: 0px 10px 0 5px;
-    height:20px;
-    width: 20px;
+    height:17px;
+    width: 17px;
 }
+
 ::placeholder{
     color: #94abbc;
 
@@ -219,11 +232,14 @@ a {
 
 }
 
-.nav2 ul {
+.list-nav2 {
+    position: relative;
+    width:350px;
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+    height: 40px;
 }
-
 
 .nav:hover .nav a {
     
@@ -257,8 +273,75 @@ nav a{
     height: 10px;
 }
 
+/******************menu déroulant********************************/
+
+.drop{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    position: absolute;
+    top:-350px;
+
+    width: 80px;
+    transition:.1s linear;
+    transition-delay: .2s;
+
+z-index: 2;
+}
+
+.active{
+   top:39px;
+}
+
+.drop li{
+padding: 15px;
+color: black;
+font-family: var(--font3);
+}
+
+.drop li:hover{
+    letter-spacing: 1px;
+}
 
 
+
+
+
+.indicator{
+    width: 110px;
+    height: 30px;
+    background: #d0e2f0;
+    position: absolute;
+top: 40px;
+border-radius: 0 0 10px 10px;
+left: -500px;
+transition: .2s ease-out ;
+}
+
+
+.indicator::before{
+    content:"";
+    position: absolute;
+    top: 0px;
+    left:-15px;
+    width:15px;
+    height: 15px;
+    background: white;
+    border-radius: 0  10px 0 0;
+    box-shadow:3px -3px 0 0 #d0e2f0 ;
+}
+.indicator::after{
+    content:"";
+    position: absolute;
+    top: 0px;
+    left:110px;
+    width:15px;
+    height: 15px;
+    background: white;
+    border-radius: 10px  0px 0 0;
+    box-shadow:-3px -3px 0 0 #d0e2f0 ;
+}
 
 
 

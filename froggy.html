@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
+    <script src="./script.js" defer></script>
     <title>Footer responsive</title>
   </head>
 
@@ -42,24 +43,54 @@
         </div>
       </div>
       <div class="contain-right">
-      <div class="container-search">
-        <button class="loupe" type="submit">
-          <img src="/assets/images/loupe.png" alt="image de loupe" />
-        </button>
-        <input type="search" class="search" placeholder="Rechercher" />
-      </div>
+        <div class="container-search">
+          <input type="search" class="search" placeholder="Rechercher" />
+          <button class="loupe" type="submit">
+            <img src="/assets/images/loupe.png" alt="image de loupe" />
+          </button>
+        </div>
 
-      <div class="connexion">
-        <a href="#">Login</a>
+        <div class="connexion">
+          <a href="#">Login</a>
+        </div>
       </div>
-    </div>
     </nav>
 
     <nav class="nav2">
-      <ul>
-        <div class="nav"><a href="#" class="underline">Jouer</a></div>
-        <div class="nav"><a href="#" class="underline">Profil</a></div>
-        <div class="nav"><a href="#" class="underline">Boutique</a></div>
+      <ul class="list-nav2">
+        <div class="nav" id="nav2nav1">
+          <a href="#" class="underline">Jouer</a>
+          <ul class="drop">
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+          </ul>
+        </div>
+        <div class="nav">
+          <a href="#" class="underline">Profil</a>
+
+          <ul class="drop">
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+          </ul>
+        </div>
+        <div class="nav">
+          <a href="#" class="underline">Boutique</a>
+
+          <ul class="drop">
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+            <li>random</li>
+          </ul>
+        </div>
+        <div class="indicator" id="indicator"></div>
       </ul>
     </nav>
 
