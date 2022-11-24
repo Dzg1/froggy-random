@@ -1,4 +1,4 @@
-let list = document.querySelectorAll(".nav");
+let list = document.querySelectorAll(".navdrop");
 let drop = document.querySelectorAll(".drop");
 let indicator = document.querySelector("#indicator");
 let language = document.querySelector("#language")
