@@ -383,24 +383,24 @@ transition: .2s ease-out;
 #indicator-sousmenu::before {
     content: "";
     position: absolute;
-    top: -9px;
-    left:12.5px;
-    width: 5px;
-    height: 5px;
+    top: -12.8px;
+    left:7.5px;
+    width: 10px;
+    height: 10px;
     background: #d0e2f0;
-    border-radius: 0 0 4px  0;
+    border-radius: 0 0 10px  0;
     box-shadow: 2px 2px 0 0 white;
 }
 
 #indicator-sousmenu::after {
     content: "";
     position: absolute;
-    top: 39px;
-    left: 12.5px;
-    width: 5px;
-    height: 5px;
+    top: 37.5px;
+    left: 7.5px;
+    width: 10px;
+    height: 10px;
     background: #d0e2f0;
-    border-radius: 0 4px  0 0;
+    border-radius: 0 10px  0 0;
     box-shadow: 2px -2px 0 0 white;
 }
 
