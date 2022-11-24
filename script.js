@@ -14,6 +14,7 @@ let fr = document.querySelector("#fr");
 let uk = document.querySelector("#uk");
 let light = document.querySelector("#light");
 let dark = document.querySelector("#dark");
+let noDrop = document.querySelector("#no-drop")
 
 function active(a) {
   drop.forEach((item) => {
@@ -31,7 +32,7 @@ for (let i = 0; i < list.length; i++) {
     indicator.style.left= calcule+"px";
  
     indicator.style.height= drop[i].offsetHeight +10 +"px";
-  });
+  });  
   indicator.addEventListener("mouseout", () => {
     drop[i].classList.remove("active");
     drop[i].style.transitionDelay = "0s";
@@ -40,8 +41,24 @@ for (let i = 0; i < list.length; i++) {
     box.classList.remove("box-size-up");
     spaceSousmenu.classList.remove("space-sousmenu");
     indicatorSousmenu.classList.remove("size-indicator");
+    indicatorSousmenu.classList.remove("size-indicator-theme");
+    boxTheme.classList.remove("box-size-up");
+    spaceTheme.classList.remove("space-sousmenu");
   });
+  
+  // noDrop.addEventListener("click", () =>{
+  //   noDrop.style.background = "blue" ;
+  //   drop[i].classList.remove("active");
+  //   drop[i].style.transitionDelay = "0s";
+  //   indicator.style.left = "-800px";
+  //   indicator.style.height = "80px";
+  //   box.classList.remove("box-size-up");
+  //   spaceSousmenu.classList.remove("space-sousmenu");
+  //   indicatorSousmenu.classList.remove("size-indicator");
+  // });
+
 }
+
 
 language.addEventListener("click", () =>{
   box.forEach(langue =>{
